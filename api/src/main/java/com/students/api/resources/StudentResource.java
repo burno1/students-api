@@ -65,6 +65,7 @@ public class StudentResource {
 		if(obj.getTelefones() != null) {
 			String regex = "\\(?\\d{2,}\\)?[ -]?\\d{4,5}[\\-\\s]?\\d{4}";
 			Pattern patternPhone = Pattern.compile(regex);
+			
 			for (Phone phone : phones) {
 				 Matcher mat = patternPhone.matcher (phone.getTelefone());
 				if(!mat.matches()) {
