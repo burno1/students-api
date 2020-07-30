@@ -4,7 +4,7 @@ Created a API to do CRUD operations around students...
 # disclaimer
 To make the "matricula" unique constraint works, you'll need to put the following code on your mysql CLi/workbench
 
-```alter table student add constraint uniqueMatricula unique(matricula```
+```alter table student add constraint uniqueMatricula unique(matricula);```
 
 - The API methods supported are
   - POST
@@ -27,7 +27,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
   ### endpoint: /students
   
   JSON:
-  {
+  ```{
     "nome":"john",
     "sobrenome": "doe",
     "matricula":"mat123",
@@ -36,7 +36,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
             "telefone":"(41) 1123-4444"
         }
     ]
-  }
+  }```
   
   ## PUT
   The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
