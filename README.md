@@ -27,7 +27,8 @@ if not correctly inserted, you'll receive a bad request.
 ### endpoint: /students
   
 JSON:
-  ``` {
+  ``` 
+  {
     "nome":"john",
     "sobrenome": "doe",
     "matricula":"mat123",
@@ -47,7 +48,8 @@ The put method makes a update on a pre existing record, you must offer the id fo
 ### endpoint: /students/{id}
 
 JSON:
-  ``` {
+  ``` 
+  {
     "nome":"joana",
     "sobrenome":"doe",
     "telefones":[
