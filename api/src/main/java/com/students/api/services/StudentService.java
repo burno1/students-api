@@ -23,13 +23,24 @@ public class StudentService {
 	}
 
 	public Student insert(Student obj) {
-		obj.setId(null);
 		return repo.save(obj);
 	}
 
 	public Student update(Student obj) {
-		find(obj.getId());
-
+		Student student = new Student();
+		student = find(obj.getId());
+		
+		if(obj.getMatricula() == null) {
+			obj.setMatricula(student.getMatricula());
+		}
+		
+		if(obj.getNome() == null) {
+			obj.setNome(student.getNome());
+		}
+		if(obj.getSobrenome() == null) {
+			obj.setSobrenome(student.getSobrenome());
+		}
+		
 		return repo.save(obj);
 	}
 

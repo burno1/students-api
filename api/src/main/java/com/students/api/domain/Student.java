@@ -3,52 +3,87 @@
  */
 package com.students.api.domain;
 
-import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 /**
  * @author Bruno Fernandes
  *
  */
-
 @Entity
+@EnableAutoConfiguration
 public class Student {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String email;
+	@NotBlank(message = "Nome eh obrigatorio")
+	@NotNull(message="nome nao pode ser nulo")
+	@Size(min = 3,message = "Tamanho minimo eh 3")
 	private String nome;
-	private Date dataNasc;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
+	@NotNull(message="Sobrenome nao pode ser nulo")
+	@Size(min = 3,message = "Tamanho minimo eh 3")
+	private String sobrenome;
+	
+	@NotNull
+	@Size(min = 3,message = "Tamanho minimo eh 3")
+	@Column(unique = true)
+	private String matricula;
+	
+	@OneToMany(cascade = CascadeType.REMOVE)
+	private List<Phone> telefones;
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNasc() {
-		return dataNasc;
+
+	public Integer getId() {
+		return id;
 	}
-	public void setDataNasc(Date dataNasc) {
-		this.dataNasc = dataNasc;
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	
-	
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public List<Phone> getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(List<Phone> telefones) {
+		this.telefones = telefones;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
 
 }
