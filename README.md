@@ -1,7 +1,9 @@
 # students-api
-Created a API to do CRUD operations around students...
+Created a API to do CRUD operations around student object...
 
 # disclaimer
+The spring will generate the tables for you! 
+but
 To make the "matricula" unique constraint works, you'll need to put the following code on your mysql CLi/workbench
 
 ```alter table student add constraint uniqueMatricula unique(matricula);```
