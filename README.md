@@ -36,7 +36,8 @@ JSON:
             "telefone":"(41) 1123-4444"
         }
     ]
-  } ```
+  } 
+  ```
   
 ## PUT
 The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
@@ -54,11 +55,12 @@ JSON:
             "telefone":"(41)11133-4444"
         }
     ]
-  } ```
+  } 
+  ```
 
 ## DELETE
 This method deletes the object and phones from database
-  
+
 ### endpoint: /students/{id}
 
 ## GET 
