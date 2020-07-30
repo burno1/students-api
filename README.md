@@ -27,7 +27,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
   ### endpoint: /students
   
   JSON:
-  ```{
+  ``` {
     "nome":"john",
     "sobrenome": "doe",
     "matricula":"mat123",
@@ -36,7 +36,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
             "telefone":"(41) 1123-4444"
         }
     ]
-  }```
+  } ```
   
   ## PUT
   The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
@@ -46,7 +46,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
   ### endpoint: /students/{id}
   
   JSON:
-  {
+  ```{
     "nome":"joana",
     "sobrenome":"doe",
     "telefones":[
@@ -54,7 +54,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
             "telefone":"(41)11133-4444"
         }
     ]
-}
+  }```
 
   ## DELETE
   This method deletes the object and phones from database
