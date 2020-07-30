@@ -12,7 +12,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
 - DELETE
 - GET
 
-##POST:
+## POST:
 @param object - the object to be persisted
 
 The post method accepts the object in form of a JSON, you can use this on postman.
@@ -41,9 +41,10 @@ JSON:
   ```
   
 ## PUT
+@param Id - the id of the object
 The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
 
-@param Id - the id of the object
+
 
 ### endpoint: /students/{id}
 
@@ -66,9 +67,9 @@ This method deletes the object and phones from database
 ### endpoint: /students/{id}
 
 ## GET 
-This method gets the specific object from database
-
 @param Id - the id of the object
+
+This method gets the specific object from database
 
 ### endpoint: /students/{id}
 
