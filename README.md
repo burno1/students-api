@@ -12,6 +12,12 @@ To make the "matricula" unique constraint works, you'll need to put the followin
 - DELETE
 - GET
 
+## GET ALL
+In order to get all objects persisted, all you need to do is perfom a GET on the specific endpoint
+
+### endpoint: /students
+
+
 ## POST:
 @param object - the object to be persisted
 
@@ -42,6 +48,7 @@ JSON:
   
 ## PUT
 @param Id - the id of the object
+
 The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
 
 
