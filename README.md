@@ -27,8 +27,8 @@ The post method accepts the object in form of a JSON, you can use this on postma
 the method accepts the object bellow, **nome*, **sobrenome**,**matricula** are the required fields with minimun size of 3 characters
 
 **telefones** is optional, but if you want to insert it you must insert in the following patterns
--(99)9999-9999
--99 99999999
+* (99)9999-9999
+* 99 99999999
 
 if not correctly inserted, you'll receive a bad request.
 
