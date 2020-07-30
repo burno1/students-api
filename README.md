@@ -24,7 +24,7 @@ To make the "matricula" unique constraint works, you'll need to put the followin
   
   if not correctly inserted, you'll receive a bad request.
   
-  ###endpoint: /students
+  ### endpoint: /students
   
   JSON:
   {
@@ -38,11 +38,12 @@ To make the "matricula" unique constraint works, you'll need to put the followin
     ]
   }
   
-  ##PUT
+  ## PUT
   The put method makes a update on a pre existing record, you must offer the id for the correct behavior, must have at least 1 field to update.
   
   @param Id - the id of the object
-  ###endpoint: /students/{id}
+  
+  ### endpoint: /students/{id}
   
   JSON:
   {
@@ -55,17 +56,17 @@ To make the "matricula" unique constraint works, you'll need to put the followin
     ]
 }
 
-  ##DELETE
+  ## DELETE
   This method deletes the object and phones from database
   
-  ###endpoint: /students/{id}
+  ### endpoint: /students/{id}
   
-  ##GET 
+  ## GET 
   This method gets the specific object from database
   
   @param Id - the id of the object
   
-  ###endpoint: /students/{id}
+  ### endpoint: /students/{id}
   
   
 
